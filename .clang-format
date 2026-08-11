@@ -1,0 +1,23 @@
+---
+Language: C
+BasedOnStyle: Google
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 90
+
+BreakBeforeBraces: Attach
+
+AlignConsecutiveMacros: true
+AlignConsecutiveAssignments: true
+
+AlignConsecutiveDeclarations: true
+BinPackParameters: true
+ContinuationIndentWidth: 5
+
+SortIncludes: false
+IncludeBlocks: Preserve
+
+PointerAlignment: Right
+---
