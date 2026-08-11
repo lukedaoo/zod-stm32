@@ -47,7 +47,7 @@ int main(void) {
     }
 }
 
-void Reset_Handler(void) {
+void reset_handler(void) {
     extern uint32_t _sidata, _sdata, _edata, _sbss, _ebss;
     uint32_t       *src = &_sidata, *dst = &_sdata;
     while (dst < &_edata) *dst++ = *src++;
@@ -59,5 +59,5 @@ void Reset_Handler(void) {
 
 __attribute__((section(".isr_vector"))) void (*const vector_table[])(void) = {
      (void (*)(void))0x20005000,  // initial SP: top of 20KB RAM
-     Reset_Handler,
+     reset_handler,
 };
