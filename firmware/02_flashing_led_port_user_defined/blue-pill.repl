@@ -1,0 +1,7 @@
+using "platforms/cpus/stm32f103.repl"
+
+led: Miscellaneous.LED @ gpioPortC 13
+    invert: true
+
+gpioPortC:
+    13 -> led@0

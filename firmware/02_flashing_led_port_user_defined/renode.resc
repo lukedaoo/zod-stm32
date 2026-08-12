@@ -1,0 +1,12 @@
+using sysbus
+
+mach create "blue-pill"
+machine LoadPlatformDescription @blue-pill.repl
+machine SetAdvanceImmediately false
+cpu PerformanceInMips 72
+
+logLevel -1 sysbus.gpioPortC.led
+
+sysbus LoadELF @blink.elf
+
+start

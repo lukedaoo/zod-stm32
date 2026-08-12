@@ -20,7 +20,7 @@
 // RM0008 9.2.5 GPIOx_BSRR, p.173, offset 0x10: bits 0-15 set, 16-31 reset.
 #define GPIO_BSRR (*(volatile uint32_t *)(GPIO_BASE + 0x10))
 
-#define DEFAULT_DELAY 200000  // 200ms
+#define DEFAULT_DELAY 1000000  // 1s
 
 static void delay(volatile uint32_t n) {
     while (n--) __asm__("nop");
